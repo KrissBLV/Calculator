@@ -37,5 +37,20 @@ namespace Calculator
             Button button = (Button)sender;
             Display.Text += button.Text;
         }
+
+        private void buttonDecimal_Click(object sender, EventArgs e)
+        {
+            if(!Display.Text.Contains("."))
+            {
+                if(Display.Text == string.Empty)
+                {
+                    Display.Text += "0.";
+                }
+                else
+                {
+                    Display.Text += ".";
+                }
+            }
+        }
     }
 }

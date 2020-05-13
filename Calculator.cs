@@ -15,6 +15,8 @@ namespace Calculator
     {
 
         char decimalSeperator;
+        double numOne = 0;
+        double numTwo = 0;
         public Calculator()
         {
             InitializeComponent();
@@ -100,6 +102,18 @@ namespace Calculator
             {
 
             }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            numOne = Convert.ToDouble(Display.Text);
+            Display.Text = string.Empty;
+        }
+
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+            numTwo = Convert.ToDouble(Display.Text);
+            Display.Text = (numOne + numTwo).ToString();
         }
     }
 }

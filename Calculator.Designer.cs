@@ -40,6 +40,8 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonDecimal = new System.Windows.Forms.Button();
+            this.buttonBackspace = new System.Windows.Forms.Button();
+            this.buttonSign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -153,7 +155,8 @@
             // 
             // buttonDecimal
             // 
-            this.buttonDecimal.Location = new System.Drawing.Point(184, 331);
+            this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDecimal.Location = new System.Drawing.Point(12, 331);
             this.buttonDecimal.Name = "buttonDecimal";
             this.buttonDecimal.Size = new System.Drawing.Size(80, 80);
             this.buttonDecimal.TabIndex = 11;
@@ -161,11 +164,35 @@
             this.buttonDecimal.UseVisualStyleBackColor = true;
             this.buttonDecimal.Click += new System.EventHandler(this.buttonDecimal_Click);
             // 
+            // buttonBackspace
+            // 
+            this.buttonBackspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBackspace.Location = new System.Drawing.Point(184, 331);
+            this.buttonBackspace.Name = "buttonBackspace";
+            this.buttonBackspace.Size = new System.Drawing.Size(80, 80);
+            this.buttonBackspace.TabIndex = 12;
+            this.buttonBackspace.Text = "🠔";
+            this.buttonBackspace.UseVisualStyleBackColor = true;
+            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
+            // 
+            // buttonSign
+            // 
+            this.buttonSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSign.Location = new System.Drawing.Point(283, 73);
+            this.buttonSign.Name = "buttonSign";
+            this.buttonSign.Size = new System.Drawing.Size(80, 80);
+            this.buttonSign.TabIndex = 13;
+            this.buttonSign.Text = "+/-";
+            this.buttonSign.UseVisualStyleBackColor = true;
+            this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 475);
+            this.Controls.Add(this.buttonSign);
+            this.Controls.Add(this.buttonBackspace);
             this.Controls.Add(this.buttonDecimal);
             this.Controls.Add(this.button0);
             this.Controls.Add(this.button9);
@@ -199,6 +226,8 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonDecimal;
+        private System.Windows.Forms.Button buttonBackspace;
+        private System.Windows.Forms.Button buttonSign;
     }
 }
 
